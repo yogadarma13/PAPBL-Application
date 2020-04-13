@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_login_register"
+    tools:context=".LoginFragment">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Masuk"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/et_email_login"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_email_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:background="@drawable/bg_edit_text"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <EditText
+        android:id="@+id/et_password_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_edit_text"
+        android:padding="16dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_email_login" />
+
+    <CheckBox
+        android:id="@+id/cb_password_visibility_login"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="10dp"
+        android:button="@drawable/visibility_password"
+        app:layout_constraintBottom_toBottomOf="@+id/et_password_login"
+        app:layout_constraintEnd_toEndOf="@+id/et_password_login"
+        app:layout_constraintTop_toTopOf="@+id/et_password_login" />
+
+    <TextView
+        android:id="@+id/tv_forget_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:text="Lupa password?"
+        android:textColor="@android:color/holo_blue_dark"
+        app:layout_constraintRight_toRightOf="@id/et_password_login"
+        app:layout_constraintTop_toBottomOf="@+id/et_password_login" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:padding="16dp"
+        android:text="Masuk"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/tv_forget_pass"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forget_pass" />
+
+    <LinearLayout
+        android:id="@+id/garis_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="45"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:gravity="center_horizontal"
+            android:text="Atau"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="45"
+            android:background="@android:color/darker_gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_login_google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/garis_or"
+        android:layout_marginHorizontal="36dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_button_border"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/garis_or"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="36dp"
+        android:layout_marginBottom="40dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_google" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Masuk dengan Google"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
